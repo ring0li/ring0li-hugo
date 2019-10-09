@@ -6,10 +6,20 @@
     <description>Recent content on 流利的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 11 Jan 2017 11:40:52 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Apr 2018 10:48:41 +0800</lastBuildDate>
     
 	<atom:link href="http://awesome-php.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>简单实现银行卡机密php扩展</title>
+      <link>http://awesome-php.com/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E6%9C%BA%E5%AF%86%E6%89%A9%E5%B1%95/</link>
+      <pubDate>Mon, 09 Apr 2018 10:48:41 +0800</pubDate>
+      
+      <guid>http://awesome-php.com/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E6%9C%BA%E5%AF%86%E6%89%A9%E5%B1%95/</guid>
+      <description>和 mcrypt_encrypt ($etype, $secret_key, $string, MCRYPT_MODE_CBC, $iv) 一样，只是把 $secret_key 写死在扩展里
+源码：https://github.com/ring0li/demo/tree/master/php%E5%8A%A0%E5%AF%86%E6%89%A9%E5%B1%95</description>
+    </item>
     
     <item>
       <title>php把html转换为png图片（支持js动态渲染）</title>
@@ -38,9 +48,9 @@ echo &amp;quot;/usr/local/ssl/lib&amp;quot; &amp;gt;&amp;gt; /etc/ld.so.conf ldc
     </item>
     
     <item>
-      <title>about</title>
+      <title></title>
       <link>http://awesome-php.com/about/</link>
-      <pubDate>Thu, 08 Dec 2016 18:19:34 +0800</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://awesome-php.com/about/</guid>
       <description></description>
