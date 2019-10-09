@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>流利的技术博客</title>
+    <title>流利博客</title>
     <link>http://awesome-php.com/</link>
-    <description>Recent content on 流利的技术博客</description>
+    <description>Recent content on 流利博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Mon, 09 Apr 2018 10:48:41 +0800</lastBuildDate>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 09 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://awesome-php.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>简单实现银行卡机密php扩展</title>
+      <title>简单的加密php扩展</title>
       <link>http://awesome-php.com/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E6%9C%BA%E5%AF%86%E6%89%A9%E5%B1%95/</link>
-      <pubDate>Mon, 09 Apr 2018 10:48:41 +0800</pubDate>
+      <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://awesome-php.com/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E6%9C%BA%E5%AF%86%E6%89%A9%E5%B1%95/</guid>
-      <description>和 mcrypt_encrypt ($etype, $secret_key, $string, MCRYPT_MODE_CBC, $iv) 一样，只是把 $secret_key 写死在扩展里
-源码：https://github.com/ring0li/demo/tree/master/php%E5%8A%A0%E5%AF%86%E6%89%A9%E5%B1%95</description>
+      <description>初衷想把数据库里的银行卡加密，但是加密的key，要保密，所以想到放在扩展里~ 原理和 mcrypt_encrypt ($etype, $secret_key, $string, MCRYPT_MODE_CBC, $iv) 一样，只是把 $secret_key 写死在扩展里~ 源码</description>
     </item>
     
     <item>
@@ -27,24 +26,16 @@
       <pubDate>Wed, 11 Jan 2017 11:40:52 +0800</pubDate>
       
       <guid>http://awesome-php.com/post/php%E6%8A%8Ahtml%E8%BD%AC%E6%8D%A2%E4%B8%BApng%E5%9B%BE%E7%89%87/</guid>
-      <description>全局安装 curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer 替换国内镜像 composer config -g repo.packagist composer https://packagist.phpcomposer.com composer require anam/phantommagick composer require anam/phantomjs-linux-x86-binary 下载mac版phantomjs， wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-macosx.zip 然后 cp -rf /Users/liuli/Downloads/phantomjs-2.1.1-macosx/ /Users/liuli/work/test/vendor/anam/phantomjs-linux-x86-binary/  运行代码 require_once &amp;quot;vendor/autoload.php&amp;quot;; use Anam\PhantomMagick\Converter; $conv = new \Anam\PhantomMagick\Converter(); $conv-&amp;gt;source(&#39;http://baidu.com&#39;) -&amp;gt;toPng() -&amp;gt;save(&#39;baidu.png&#39;);  第二次更新
-后来遇到需要支持js渲染的页面， 还是安装phantomjs（免安装版），下载rasterize.js，执行命令即可。
-phantomjs rasterize.js &amp;quot;url&amp;quot; &amp;quot;pdf保存路径&amp;quot;  下边是自己用的批量的脚本
-#/bin/bash #set -v -x . param.sh for i in &amp;quot;${ar[@]}&amp;quot; ; do b=($i) #此时b就相当于二维数组里面的一维数组了，然后可以再次遍历 uigId=${b[0]} uId=${b[1]} goodsId=${b[2]} money=${b[3]} buaId=${b[4]} path=&amp;quot;pdf/${buaId}/${uigId}_${uId}.</description>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 全局安装 curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer 替换国内镜像 composer config -g repo.packagist composer https://packagist.phpcomposer.com composer require anam/phantommagick composer require anam/phantomjs-linux-x86-binary 下载mac版phantomjs， wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-macosx.zip 然后 cp -rf /Users/liuli/Downloads/phantomjs-2.1.1-macosx/ /Users/liuli/work/test/vendor/anam/phantomjs-linux-x86-binary/</description>
     </item>
     
     <item>
-      <title>mitmproxy不能加载openssl的问题</title>
+      <title>mitmproxy升级openssl的问题</title>
       <link>http://awesome-php.com/post/mitmproxy%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDopenssl%E7%9A%84%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Fri, 16 Dec 2016 16:36:39 +0800</pubDate>
+      <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://awesome-php.com/post/mitmproxy%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDopenssl%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
-      <description>安装openssl-1.0.2j ./config --prefix=/usr/local/ssl -fPIC shared &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install  ###安装python-2.7.12
-vim Python-2.7.12/Modules/Setup  去掉这4行注释
-#SSL=/usr/local/ssl #_ssl _ssl.c \ # -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \ # -L$(SSL)/lib -lssl -lcrypto ./configure --prefix=/home/work/lib/python-2.7.12 &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install ln -s /home/work/lib/python-2.7.12/bin/python /usr/local/bin/python  安装mitmproxy
-python get-pip.py pip install mitmproxy  运行mitmproxy，报错提示
-“ImportError: /home/work/lib/python-2.7.12/lib/python2.7/site-packages/cryptography/hazmat/bindings/_openssl.so: undefined symbol: EC_GROUP_new_curve_GF2m”  ldd /home/work/lib/python-2.7.12/lib/python2.7/site-packages/cryptography/hazmat/bindings/_openssl.so  发现加载的动态链接是旧版本openssl 增加动态库搜索目录
-echo &amp;quot;/usr/local/ssl/lib&amp;quot; &amp;gt;&amp;gt; /etc/ld.so.conf ldconfig python -c &amp;quot;import ssl; print ssl.</description>
+      <description>我抓包使用的是mitmproxy，命令行操作，很方便~ 但是最近升级发现加载不了openssl版本过低，升级过程中遇到的问题。 安装最新版ope</description>
     </item>
     
     <item>

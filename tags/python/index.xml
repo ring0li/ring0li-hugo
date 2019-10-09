@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on 流利的技术博客</title>
+    <title>python on 流利博客</title>
     <link>http://awesome-php.com/tags/python/</link>
-    <description>Recent content in Python on 流利的技术博客</description>
+    <description>Recent content in python on 流利博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Thu, 08 Dec 2016 18:19:34 +0800</lastBuildDate>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Dec 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://awesome-php.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>about</title>
-      <link>http://awesome-php.com/about/</link>
-      <pubDate>Thu, 08 Dec 2016 18:19:34 +0800</pubDate>
+      <title>mitmproxy升级openssl的问题</title>
+      <link>http://awesome-php.com/post/mitmproxy%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDopenssl%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://awesome-php.com/about/</guid>
-      <description></description>
+      <guid>http://awesome-php.com/post/mitmproxy%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDopenssl%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>我抓包使用的是mitmproxy，命令行操作，很方便~ 但是最近升级发现加载不了openssl版本过低，升级过程中遇到的问题。 安装最新版ope</description>
     </item>
     
   </channel>

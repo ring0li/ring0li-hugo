@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://awesome-php.com/sitemap.xml

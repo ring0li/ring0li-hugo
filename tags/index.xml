@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on 流利的技术博客</title>
+    <title>Tags on 流利博客</title>
     <link>http://awesome-php.com/tags/</link>
-    <description>Recent content in Tags on 流利的技术博客</description>
+    <description>Recent content in Tags on 流利博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 09 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://awesome-php.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PHP扩展</title>
+      <link>http://awesome-php.com/tags/php%E6%89%A9%E5%B1%95/</link>
+      <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://awesome-php.com/tags/php%E6%89%A9%E5%B1%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>http://awesome-php.com/tags/python/</link>
+      <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://awesome-php.com/tags/python/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
