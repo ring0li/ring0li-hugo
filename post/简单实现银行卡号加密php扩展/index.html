@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>mitmproxy · 流利博客</title>
+  <title>简单实现银行卡号加密（php扩展） - 流利博客</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="流利" /><meta name="description" content="PHP、Golang、软件架构、项目管理" /><meta name="keywords" content="流利, 9188917, ring0li" />
+<meta name="author" content="流利" /><meta name="description" content="初衷想把数据库里的银行卡加密，但是加密的key，要保密，所以想到放在扩展里~ 原理和 mcrypt_encrypt ($etype, $secret_key, $string, MCRYPT_MODE_CBC, $iv) 一样，只是把 $secret_key 写死在扩展里~ 源码" /><meta name="keywords" content="流利, 9188917, ring0li" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
-<link rel="canonical" href="http://awesome-php.com/categories/mitmproxy/" />
-  <link href="http://awesome-php.com/categories/mitmproxy/index.xml" rel="alternate" type="application/rss+xml" title="流利博客" />
-  <link href="http://awesome-php.com/categories/mitmproxy/index.xml" rel="feed" type="application/rss+xml" title="流利博客" />
+<link rel="canonical" href="http://awesome-php.com/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E5%8F%B7%E5%8A%A0%E5%AF%86php%E6%89%A9%E5%B1%95/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,18 +38,26 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="mitmproxy" />
-<meta property="og:description" content="PHP、Golang、软件架构、项目管理" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://awesome-php.com/categories/mitmproxy/" />
+<meta property="og:title" content="简单实现银行卡号加密（php扩展）" />
+<meta property="og:description" content="初衷想把数据库里的银行卡加密，但是加密的key，要保密，所以想到放在扩展里~ 原理和 mcrypt_encrypt ($etype, $secret_key, $string, MCRYPT_MODE_CBC, $iv) 一样，只是把 $secret_key 写死在扩展里~ 源码" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://awesome-php.com/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E5%8F%B7%E5%8A%A0%E5%AF%86php%E6%89%A9%E5%B1%95/" />
+<meta property="article:published_time" content="2017-04-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-04-09T00:00:00+00:00" />
+<meta itemprop="name" content="简单实现银行卡号加密（php扩展）">
+<meta itemprop="description" content="初衷想把数据库里的银行卡加密，但是加密的key，要保密，所以想到放在扩展里~ 原理和 mcrypt_encrypt ($etype, $secret_key, $string, MCRYPT_MODE_CBC, $iv) 一样，只是把 $secret_key 写死在扩展里~ 源码">
 
-<meta property="og:updated_time" content="2016-12-16T00:00:00+00:00" />
-<meta itemprop="name" content="mitmproxy">
-<meta itemprop="description" content="PHP、Golang、软件架构、项目管理">
 
+<meta itemprop="datePublished" content="2017-04-09T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-04-09T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="63">
+
+
+
+<meta itemprop="keywords" content="PHP扩展," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="mitmproxy"/>
-<meta name="twitter:description" content="PHP、Golang、软件架构、项目管理"/>
+<meta name="twitter:title" content="简单实现银行卡号加密（php扩展）"/>
+<meta name="twitter:description" content="初衷想把数据库里的银行卡加密，但是加密的key，要保密，所以想到放在扩展里~ 原理和 mcrypt_encrypt ($etype, $secret_key, $string, MCRYPT_MODE_CBC, $iv) 一样，只是把 $secret_key 写死在扩展里~ 源码"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -111,29 +117,75 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="archive" class="archive">
-  <div class="archive-title category">
-        <h2 class="archive-name">mitmproxy</h2>
-      </div>
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">简单实现银行卡号加密（php扩展）</h1>
 
-  <div class="archive-post">
-      <span class="archive-post-time">
-        2016-12-16
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/mitmproxy%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDopenssl%E7%9A%84%E9%97%AE%E9%A2%98/" class="archive-post-link">
-          升级mitmproxy不能加载openssl的问题
-        </a>
-      </span>
-    </div>
-</section>
-
-<nav class="pagination">
-  
-  
-</nav>
-        </div>
+      <div class="post-meta">
+        <span class="post-time"> 2017-04-09 </span>
+        <div class="post-category">
+            <a href="/categories/php/"> PHP </a>
+            </div>
+          <span class="more-meta"> 约 63 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
         
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <ul>
+<li>初衷想把数据库里的银行卡加密，但是加密的key，要保密，所以想到放在扩展里~</li>
+</ul>
+
+<!-- more -->
+
+<p>原理和 mcrypt_encrypt ($etype, $secret_key, $string, MCRYPT_MODE_CBC, $iv) 一样，只是把 $secret_key 写死在扩展里~</p>
+
+<p><a href="https://github.com/ring0li/demo/tree/master/php%E5%8A%A0%E5%AF%86%E6%89%A9%E5%B1%95">源码</a></p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/php%E6%89%A9%E5%B1%95/">PHP扩展</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/html%E8%BD%AC%E6%8D%A2%E4%B8%BApng%E5%9B%BE%E7%89%87%E6%94%AF%E6%8C%81js%E5%8A%A8%E6%80%81%E6%B8%B2%E6%9F%93/">
+            <span class="next-text nav-default">php把html另保存为图片（支持js动态渲染）</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'ring0li';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
 
       </div>
     </main>

@@ -114,7 +114,7 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E6%9C%BA%E5%AF%86%E6%89%A9%E5%B1%95/">简单的加密php扩展</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E5%8F%B7%E5%8A%A0%E5%AF%86php%E6%89%A9%E5%B1%95/">简单实现银行卡号加密（php扩展）</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2017-04-09 </span>
       <div class="post-category">
@@ -130,35 +130,37 @@
       初衷想把数据库里的银行卡加密，但是加密的key，要保密，所以想到放在扩展里~ 原理和 mcrypt_encrypt ($etype, $secret_key, $string, MCRYPT_MODE_CBC, $iv) 一样，只是把 $secret_key 写死在扩展里~ 源码
     </div>
     <div class="read-more">
-      <a href="/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E6%9C%BA%E5%AF%86%E6%89%A9%E5%B1%95/" class="read-more-link">阅读更多</a>
+      <a href="/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E5%8F%B7%E5%8A%A0%E5%AF%86php%E6%89%A9%E5%B1%95/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/php%E6%8A%8Ahtml%E8%BD%AC%E6%8D%A2%E4%B8%BApng%E5%9B%BE%E7%89%87/">php把html转换为png图片（支持js动态渲染）</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/html%E8%BD%AC%E6%8D%A2%E4%B8%BApng%E5%9B%BE%E7%89%87%E6%94%AF%E6%8C%81js%E5%8A%A8%E6%80%81%E6%B8%B2%E6%9F%93/">php把html另保存为图片（支持js动态渲染）</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2017-01-11 </span>
-      
-        <span class="more-meta"> 约 306 字 </span>
+      <div class="post-category">
+          <a href="/categories/phantomjs/"> phantomjs </a>
+          </div>
+        <span class="more-meta"> 约 372 字 </span>
         <span class="more-meta"> 预计阅读 1 分钟 </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 全局安装 curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer 替换国内镜像 composer config -g repo.packagist composer https://packagist.phpcomposer.com composer require anam/phantommagick composer require anam/phantomjs-linux-x86-binary 下载mac版phantomjs， wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-macosx.zip 然后 cp -rf /Users/liuli/Downloads/phantomjs-2.1.1-macosx/ /Users/liuli/work/test/vendor/anam/phantomjs-linux-x86-binary/
+      phantomjs是一个开源的浏览器引擎，开源渲染网页转为图片，支持js渲染~ 先安装 非动态渲染（php代码版） 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
     </div>
     <div class="read-more">
-      <a href="/post/php%E6%8A%8Ahtml%E8%BD%AC%E6%8D%A2%E4%B8%BApng%E5%9B%BE%E7%89%87/" class="read-more-link">阅读更多</a>
+      <a href="/post/html%E8%BD%AC%E6%8D%A2%E4%B8%BApng%E5%9B%BE%E7%89%87%E6%94%AF%E6%8C%81js%E5%8A%A8%E6%80%81%E6%B8%B2%E6%9F%93/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/mitmproxy%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDopenssl%E7%9A%84%E9%97%AE%E9%A2%98/">mitmproxy升级openssl的问题</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/mitmproxy%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDopenssl%E7%9A%84%E9%97%AE%E9%A2%98/">升级mitmproxy不能加载openssl的问题</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2016-12-16 </span>
       <div class="post-category">

@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>简单的加密php扩展</title>
-      <link>http://awesome-php.com/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E6%9C%BA%E5%AF%86%E6%89%A9%E5%B1%95/</link>
+      <title>简单实现银行卡号加密（php扩展）</title>
+      <link>http://awesome-php.com/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E5%8F%B7%E5%8A%A0%E5%AF%86php%E6%89%A9%E5%B1%95/</link>
       <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://awesome-php.com/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E6%9C%BA%E5%AF%86%E6%89%A9%E5%B1%95/</guid>
+      <guid>http://awesome-php.com/post/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E5%8F%B7%E5%8A%A0%E5%AF%86php%E6%89%A9%E5%B1%95/</guid>
       <description>初衷想把数据库里的银行卡加密，但是加密的key，要保密，所以想到放在扩展里~ 原理和 mcrypt_encrypt ($etype, $secret_key, $string, MCRYPT_MODE_CBC, $iv) 一样，只是把 $secret_key 写死在扩展里~ 源码</description>
     </item>
     

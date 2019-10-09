@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>mitmproxy升级openssl的问题</title>
+      <title>升级mitmproxy不能加载openssl的问题</title>
       <link>http://awesome-php.com/post/mitmproxy%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDopenssl%E7%9A%84%E9%97%AE%E9%A2%98/</link>
       <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
       
