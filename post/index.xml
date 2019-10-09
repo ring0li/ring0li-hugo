@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>流利的技术博客</title>
-    <link>http://awesome-php.com/</link>
-    <description>Recent content on 流利的技术博客</description>
+    <title>Posts on 流利的技术博客</title>
+    <link>http://awesome-php.com/post/</link>
+    <description>Recent content in Posts on 流利的技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 11 Jan 2017 11:40:52 +0800</lastBuildDate>
     
-	<atom:link href="http://awesome-php.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://awesome-php.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -35,15 +35,6 @@ vim Python-2.7.12/Modules/Setup  去掉这4行注释
 python get-pip.py pip install mitmproxy  运行mitmproxy，报错提示
 “ImportError: /home/work/lib/python-2.7.12/lib/python2.7/site-packages/cryptography/hazmat/bindings/_openssl.so: undefined symbol: EC_GROUP_new_curve_GF2m”  ldd /home/work/lib/python-2.7.12/lib/python2.7/site-packages/cryptography/hazmat/bindings/_openssl.so  发现加载的动态链接是旧版本openssl 增加动态库搜索目录
 echo &amp;quot;/usr/local/ssl/lib&amp;quot; &amp;gt;&amp;gt; /etc/ld.so.conf ldconfig python -c &amp;quot;import ssl; print ssl.</description>
-    </item>
-    
-    <item>
-      <title>about</title>
-      <link>http://awesome-php.com/about/</link>
-      <pubDate>Thu, 08 Dec 2016 18:19:34 +0800</pubDate>
-      
-      <guid>http://awesome-php.com/about/</guid>
-      <description></description>
     </item>
     
   </channel>

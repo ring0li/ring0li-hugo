@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>流利的技术博客  | php把html转换为png图片（支持js动态渲染）</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.58.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="php把html转换为png图片（支持js动态渲染）" />
+<meta property="og:description" content="全局安装 curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer 替换国内镜像 composer config -g repo.packagist composer https://packagist.phpcomposer.com composer require anam/phantommagick composer require anam/phantomjs-linux-x86-binary 下载mac版phantomjs， wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-macosx.zip 然后 cp -rf /Users/liuli/Downloads/phantomjs-2.1.1-macosx/ /Users/liuli/work/test/vendor/anam/phantomjs-linux-x86-binary/  运行代码 require_once &quot;vendor/autoload.php&quot;; use Anam\PhantomMagick\Converter; $conv = new \Anam\PhantomMagick\Converter(); $conv-&gt;source(&#39;http://baidu.com&#39;) -&gt;toPng() -&gt;save(&#39;baidu.png&#39;);  第二次更新
+后来遇到需要支持js渲染的页面， 还是安装phantomjs（免安装版），下载rasterize.js，执行命令即可。
+phantomjs rasterize.js &quot;url&quot; &quot;pdf保存路径&quot;  下边是自己用的批量的脚本
+#/bin/bash #set -v -x . param.sh for i in &quot;${ar[@]}&quot; ; do b=($i) #此时b就相当于二维数组里面的一维数组了，然后可以再次遍历 uigId=${b[0]} uId=${b[1]} goodsId=${b[2]} money=${b[3]} buaId=${b[4]} path=&quot;pdf/${buaId}/${uigId}_${uId}." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://awesome-php.com/post/php%E6%8A%8Ahtml%E8%BD%AC%E6%8D%A2%E4%B8%BApng%E5%9B%BE%E7%89%87/" />
+<meta property="article:published_time" content="2017-01-11T11:40:52+08:00" />
+<meta property="article:modified_time" content="2017-01-11T11:40:52+08:00" />
+<meta itemprop="name" content="php把html转换为png图片（支持js动态渲染）">
+<meta itemprop="description" content="全局安装 curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer 替换国内镜像 composer config -g repo.packagist composer https://packagist.phpcomposer.com composer require anam/phantommagick composer require anam/phantomjs-linux-x86-binary 下载mac版phantomjs， wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-macosx.zip 然后 cp -rf /Users/liuli/Downloads/phantomjs-2.1.1-macosx/ /Users/liuli/work/test/vendor/anam/phantomjs-linux-x86-binary/  运行代码 require_once &quot;vendor/autoload.php&quot;; use Anam\PhantomMagick\Converter; $conv = new \Anam\PhantomMagick\Converter(); $conv-&gt;source(&#39;http://baidu.com&#39;) -&gt;toPng() -&gt;save(&#39;baidu.png&#39;);  第二次更新
+后来遇到需要支持js渲染的页面， 还是安装phantomjs（免安装版），下载rasterize.js，执行命令即可。
+phantomjs rasterize.js &quot;url&quot; &quot;pdf保存路径&quot;  下边是自己用的批量的脚本
+#/bin/bash #set -v -x . param.sh for i in &quot;${ar[@]}&quot; ; do b=($i) #此时b就相当于二维数组里面的一维数组了，然后可以再次遍历 uigId=${b[0]} uId=${b[1]} goodsId=${b[2]} money=${b[3]} buaId=${b[4]} path=&quot;pdf/${buaId}/${uigId}_${uId}.">
+
+
+<meta itemprop="datePublished" content="2017-01-11T11:40:52&#43;08:00" />
+<meta itemprop="dateModified" content="2017-01-11T11:40:52&#43;08:00" />
+<meta itemprop="wordCount" content="101">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="php把html转换为png图片（支持js动态渲染）"/>
+<meta name="twitter:description" content="全局安装 curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer 替换国内镜像 composer config -g repo.packagist composer https://packagist.phpcomposer.com composer require anam/phantommagick composer require anam/phantomjs-linux-x86-binary 下载mac版phantomjs， wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-macosx.zip 然后 cp -rf /Users/liuli/Downloads/phantomjs-2.1.1-macosx/ /Users/liuli/work/test/vendor/anam/phantomjs-linux-x86-binary/  运行代码 require_once &quot;vendor/autoload.php&quot;; use Anam\PhantomMagick\Converter; $conv = new \Anam\PhantomMagick\Converter(); $conv-&gt;source(&#39;http://baidu.com&#39;) -&gt;toPng() -&gt;save(&#39;baidu.png&#39;);  第二次更新
+后来遇到需要支持js渲染的页面， 还是安装phantomjs（免安装版），下载rasterize.js，执行命令即可。
+phantomjs rasterize.js &quot;url&quot; &quot;pdf保存路径&quot;  下边是自己用的批量的脚本
+#/bin/bash #set -v -x . param.sh for i in &quot;${ar[@]}&quot; ; do b=($i) #此时b就相当于二维数组里面的一维数组了，然后可以再次遍历 uigId=${b[0]} uId=${b[1]} goodsId=${b[2]} money=${b[3]} buaId=${b[4]} path=&quot;pdf/${buaId}/${uigId}_${uId}."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://awesome-php.com/" class="f3 fw2 hover-white no-underline white-90 dib">
+      流利的技术博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="about page">
+              about
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+<a href="ring0li" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">php把html转换为png图片（支持js动态渲染）</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2017-01-11T11:40:52&#43;08:00">January 11, 2017</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><pre><code class="language-shell">全局安装
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+
+替换国内镜像
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
+
+
+composer require anam/phantommagick
+composer require anam/phantomjs-linux-x86-binary
+
+
+下载mac版phantomjs，
+wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-macosx.zip
+然后
+cp -rf /Users/liuli/Downloads/phantomjs-2.1.1-macosx/  /Users/liuli/work/test/vendor/anam/phantomjs-linux-x86-binary/
+</code></pre>
+
+<pre><code class="language-php">运行代码
+require_once &quot;vendor/autoload.php&quot;;
+
+	use Anam\PhantomMagick\Converter;
+
+	$conv = new \Anam\PhantomMagick\Converter();
+	$conv-&gt;source('http://baidu.com')
+		-&gt;toPng()
+		-&gt;save('baidu.png');
+</code></pre>
+
+<p>第二次更新</p>
+
+<p>后来遇到需要支持js渲染的页面，
+还是安装phantomjs（免安装版），下载rasterize.js，执行命令即可。</p>
+
+<pre><code class="language-shell">phantomjs rasterize.js &quot;url&quot; &quot;pdf保存路径&quot;
+</code></pre>
+
+<p>下边是自己用的批量的脚本</p>
+
+<pre><code class="language-shell">#/bin/bash
+ 
+#set -v -x
+
+. param.sh
+
+for i in &quot;${ar[@]}&quot; ; do
+    b=($i) #此时b就相当于二维数组里面的一维数组了，然后可以再次遍历
+    uigId=${b[0]}
+    uId=${b[1]}
+    goodsId=${b[2]}
+    money=${b[3]}
+    buaId=${b[4]}
+
+    path=&quot;pdf/${buaId}/${uigId}_${uId}.pdf&quot;
+    if [ ! -f &quot;$path&quot; ]; then
+        echo $path
+        phantomjs rasterize.js &quot;https://*/xwm/agreement/detail/new_debt_trans_person/debt/?uid=${uId}&amp;uigId=${uigId}&amp;goodsId=${goodsId}&amp;money=${money}&quot; &quot;${path}&quot;
+    fi
+done
+
+</code></pre>
+
+<p>param.sh是个数组，如下</p>
+
+<pre><code class="language-shell">ar=('1051411927445811200 845631 -1515891827308 99949 LTJR_QY_590552323122802902'
+'991177525051011378 807759 -1516186170898 56694 51_QY_590552323106029163'
+'998158495453032448 915350 -1516186170925 9863 51_QY_590552323106027791')
+</code></pre>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://awesome-php.com/" >
+    &copy; 2019 流利的技术博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+<a href="ring0li" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

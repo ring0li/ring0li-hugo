@@ -3,15 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://awesome-php.com/categories/</loc>
+    <loc>http://awesome-php.com/post/php%E6%8A%8Ahtml%E8%BD%AC%E6%8D%A2%E4%B8%BApng%E5%9B%BE%E7%89%87/</loc>
+    <lastmod>2017-01-11T11:40:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://awesome-php.com/post/</loc>
+    <lastmod>2017-01-11T11:40:52+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://awesome-php.com/</loc>
+    <lastmod>2017-01-11T11:40:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://awesome-php.com/post/mitmproxy%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDopenssl%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2016-12-16T16:36:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://awesome-php.com/about/</loc>
+    <lastmod>2016-12-08T18:19:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://awesome-php.com/categories/</loc>
+    <lastmod>2016-12-08T18:19:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://awesome-php.com/categories/php/</loc>
+    <lastmod>2016-12-08T18:19:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://awesome-php.com/tags/php/</loc>
+    <lastmod>2016-12-08T18:19:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://awesome-php.com/categories/python/</loc>
+    <lastmod>2016-12-08T18:19:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://awesome-php.com/tags/python/</loc>
+    <lastmod>2016-12-08T18:19:34+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://awesome-php.com/tags/</loc>
+    <lastmod>2016-12-08T18:19:34+08:00</lastmod>
   </url>
   
 </urlset>
